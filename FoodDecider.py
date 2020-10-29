@@ -122,6 +122,7 @@ def suggestFastFood():
                 "Dairy Queen",
                 "Popeyes",
                 "McDonald's",
+                "What-a-burger"
                 ]
     choice = random.choice(fastFood)
     myLabel = Label(root, text='You should consider ordering '+str(choice)+'!')
