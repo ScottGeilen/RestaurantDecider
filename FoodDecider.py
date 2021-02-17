@@ -7,9 +7,11 @@ import pandas as pd
 from tkinter import *
 
 root = Tk()
-root.geometry('500x150')
+root.geometry('3000x1300')
+root['background'] = '#841818'
 
-myLabel = Label(root, text="Tucson, AZ Restaurant Decider ")
+myLabel = Label(root, text="Tucson, AZ Restaurant Decider", bg='#841818', fg='white')
+myLabel.config(font=("Courier", 32))
 myLabel.pack()
     
 def suggestDoorDash():
@@ -101,7 +103,8 @@ def suggestDoorDash():
                 "Golden Corral",
                 ]
     choice = random.choice(doorDash)
-    myLabel = Label(root, text='You should consider ordering '+str(choice)+'!')
+    myLabel = Label(root, text='You should order '+str(choice)+' on DoorDash!', bg='#841818', fg='white')
+    myLabel['background'] = '#841818'
     myLabel.pack()
 def suggestFastFood():
     fastFood = [
@@ -125,7 +128,8 @@ def suggestFastFood():
                 "What-a-burger"
                 ]
     choice = random.choice(fastFood)
-    myLabel = Label(root, text='You should consider ordering '+str(choice)+'!')
+    myLabel = Label(root, text='You should order '+str(choice)+'!', bg='#841818', fg='white')
+    myLabel['background'] = '#841818'
     myLabel.pack()
 def suggestDineIn():
     dineIn = [
@@ -205,12 +209,19 @@ def suggestDineIn():
                 "Golden Corral",
                 ]
     choice = random.choice(dineIn)
-    myLabel = Label(root, text='You should consider ordering '+str(choice)+'!')
+    myLabel = Label(root, text='You should order '+str(choice)+' for dine in!', bg='#841818', fg='white')
+    myLabel['background'] = '#841818'
     myLabel.pack()
-DD = Button(root, text='Feeling DoorDash?', bd='5', command=suggestDoorDash)
-FF = Button(root, text='Feeling fast food?', bd='5', command=suggestFastFood)
-DI = Button(root, text='Feeling dine in?', bd='5', command=suggestDineIn)
+DD = Button(root, text='DoorDash?', bd='5', bg='#9A1818', fg='white', borderwidth=1, command=suggestDoorDash)
+FF = Button(root, text='Fast food?', bd='5', bg='#9A1818', fg='white', borderwidth=1,  command=suggestFastFood)
+DI = Button(root, text='Dine in?', bd='5', bg='#9A1818', fg='white', borderwidth=1,  command=suggestDineIn)
 DD.pack()
+DD.config(font=("Courier", 12))
+DD.pack(pady=8)
 FF.pack()
+FF.config(font=("Courier", 12))
+FF.pack(pady=8)
 DI.pack()
+DI.config(font=("Courier", 12))
+DI.pack(pady=8)
 root.mainloop()
