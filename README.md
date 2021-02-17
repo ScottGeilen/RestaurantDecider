@@ -1,7 +1,7 @@
-# RestaurantDecider
-## [Feeling DoorDash?]
-## You should consider ordering Wendy's!
-## [Feeling fast food?]
-## You should consider ordering Popeye's!
+# Tucson, AZ Restaurant Decider
+## [DoorDash?]
+### You should order IHOP on DoorDash!
+## [Fast food?]
+### You should order Wendy's!
 ## [Feeling dine in?]
-## You should consider dining in at Buffalo Wild Wings!
+### You should order Carrabba's for dine in!
